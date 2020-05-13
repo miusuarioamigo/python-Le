@@ -1,7 +1,16 @@
+{% extends 'layout.html' %}
+{% block body%}
+
 {% with messages = get_flashed_messages() %}  <!-- Guarda valor de mensaje enviado con flash()-->
 {% if messages %}
 {% for message in messages %} <!-- por cada mensage en arreglo message -->
-    <p>{{ message }}</p>    <!-- muestra mensaje -->
+    
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <p>{{ message }}</p>    <!-- muestra mensaje -->
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 {% endfor %}
 {% endif %}
 {% endwith %}
@@ -38,3 +47,5 @@
         {% endfor %}
     </tbody>
 </table>
+
+{% endblock %}
