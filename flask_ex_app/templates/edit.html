@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% block body%}
 
-
+<div class="col-md-4 offset-md-4">
 <div class="card card-body">
     <form action="/update/{{data.0}}" method="POST">
         <div class="form-group">
@@ -19,5 +19,6 @@
             </button>
         </div>
     </form>
+</div>
 </div>
 {% endblock %}
