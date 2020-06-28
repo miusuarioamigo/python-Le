@@ -5,3 +5,4 @@ connexion-example
 materials
 gunicorn-example/
 udemycourse
+.vscode
